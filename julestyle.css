@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background:url(images/wp8161552-cat-aesthetic-pc-wallpapers.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  
+  /* mobile first grid layout */
+  .grid-1 {
+    display: grid;
+    width: 96%;
+    max-width: 900px;
+    margin: 2% auto;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    
+    grid-template-areas:    "t        t       t"
+                            "d23      d20     d12"
+                            "d2       d14     d4"
+                            "d5       d22     d16"
+                            "d1       d7      d9"
+                            "d10      d11     d18"
+                            "d13      d3      d15"
+                            "d6       d17     d8"
+                            "d19      d24     d21";
+  }
+  
+  /* media query */
+  @media only screen and (min-width: 500px) {
+    
+    .grid-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "t     t     t     d2      d7      d8"
+                           "t     t     t     d4      d11     d12"
+                           "t     t     t     d19     d9      d13"
+                           "d6    d1    d24   d24     d21     d20"
+                           "d17   d18   d24   d24     d5      d22"
+                           "d3    d23   d16   d14     d10     d15";
+    }
+    
+  }
+  
+  
+  /* individual items */
+    .title {
+      grid-area: t;
+    }
+    .day-1 {
+      grid-area: d1;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-2 {
+      grid-area: d2;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-3 {
+      grid-area: d3;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-4 {
+      grid-area: d4;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-5 {
+      grid-area: d5;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-6 {
+      grid-area: d6;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-7 {
+      grid-area: d7;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-8 {
+      grid-area: d8;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-9 {
+      grid-area: d9;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-10 {
+      grid-area: d10;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-11 {
+      grid-area: d11;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-12 {
+      grid-area: d12;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-13 {
+      grid-area: d13;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-14 {
+      grid-area: d14;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-15 {
+      grid-area: d15;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-16 {
+      grid-area: d16;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-17 {
+      grid-area: d17;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-18 {
+      grid-area: d18;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-19 {
+      grid-area: d19;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-20 {
+      grid-area: d20;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-21 {
+      grid-area: d21;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-22 {
+      grid-area: d22;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-23 {
+      grid-area: d23;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+    .day-24 {
+      grid-area: d24;
+      font-family:Marvin,serif;
+      font-size: x-large;
+      color:white;
+    }
+  
+  
+  /* door styles */
+  
+  .grid-1 input {
+    display: none;
+  }
+  
+  label {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    height: 120px;
+  }
+  
+  .door {
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 300ms;
+    border: 2px dashed transparent;
+  }
+  
+    .door div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .door .back {
+      background-color: palevioletred;
+      transform: rotateY(180deg);
+    }
+  
+    label:hover .door {
+      border-color: #385052;
+    }
+  
+    :checked + .door {
+      transform: rotateY(180deg);
+    }
+  
+    .day-24 .back {
+      background: url(images/24.jpg);
+    }
+
+    .day-23 .back {
+      background: url(images/23.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-22 .back {
+      background: url(images/22.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-21 .back {
+      background: url(images/21.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-20 .back {
+      background: url(images/20.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-19 .back {
+      background: url(images/19.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-18 .back {
+      background: url(images/18.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-17 .back {
+      background: url(images/17.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-16 .back {
+      background: url(images/16.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-15 .back {
+      background: url(images/15.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-14 .back {
+      background: url(images/14.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-13 .back {
+      background: url(images/13.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-12 .back {
+      background: url(images/12.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-11 .back {
+      background: url(images/11.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-10 .back {
+      background: url(images/10.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-9 .back {
+      background: url(images/9.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-8 .back {
+      background: url(images/8.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-7 .back {
+      background: url(images/7.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-6 .back {
+      background: url(images/6.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-5 .back {
+      background: url(images/5.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-4 .back {
+      background: url(images/4.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-3 .back {
+      background: url(images/3.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-2 .back {
+      background: url(images/2.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
+
+    .day-1 .back {
+      background: url(images/1.jpg);
+      background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:none;
+    transform: rotateY(180deg);
+    }
